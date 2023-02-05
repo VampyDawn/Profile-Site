@@ -1,0 +1,19 @@
+footer {
+	border-radius: 25px 25px 0px 0px;
+	max-width: 1400px;
+	margin-top: auto;
+	background: $background_12dp;
+	width: 100%;
+	flex: 0 1 auto;
+	.contacts {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		height: 50px;
+		.contact {
+			margin: 0px 10px;
+			font-size: 1.5rem;
+		}
+	}
+}

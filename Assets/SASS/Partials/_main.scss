@@ -1,0 +1,14 @@
+main {
+	flex: 1 1 auto;
+	margin: 20px 0px;
+}
+
+#under-development {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	h1 {
+		font-size: 3rem;
+		text-align: center;
+	}
+}

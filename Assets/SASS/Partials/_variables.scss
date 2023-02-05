@@ -1,0 +1,38 @@
+//Status
+$finished: #53d528;
+$reading: #fbce3b;
+$paused: #9256f3;
+$dropped: #e23e3e;
+
+//Base Colors
+$white: #ffffff;
+$black: #000000;
+
+//Text
+$emphasis_high: 87%;
+$emphasis_medium: 60%;
+$emphasis_disabled: 38%;
+
+//Background
+$background: #121212;
+$background_00dp: #ffffff00;
+$background_01dp: #ffffff0d;
+$background_02dp: #ffffff12;
+$background_03dp: #ffffff14;
+$background_04dp: #ffffff17;
+$background_06dp: #ffffff1c;
+$background_08dp: #ffffff1f;
+$background_12dp: #ffffff24;
+$background_16dp: #ffffff26;
+$background_24dp: #ffffff29;
+
+//Media Breakpoints
+$br-phone: 600px; //Max
+$br-tablet: 600px; //Min
+$br-ltablet: 768px; //Min
+$br-laptop: 992px; //Min
+$br-desktop: 1200px; //Min
+
+$br-s: 700px;
+$br-m: 790px;
+$br-l: 1400px;
