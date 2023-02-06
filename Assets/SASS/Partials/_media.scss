@@ -119,7 +119,9 @@
 @media (max-width: $br-s) {
 	header {
 		.banner {
-			display: none;
+			background: url("../../Assets/Images/Gura Banner Mobile.png");
+			background-size: cover;
+			background-position: center;
 		}
 	}
 	body {
