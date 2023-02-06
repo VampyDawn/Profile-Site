@@ -1,5 +1,20 @@
 html {
   margin: 0;
+  overflow-y: overlay;
+}
+html ::-webkit-scrollbar {
+  width: 20px;
+  background-color: #121212;
+}
+html ::-webkit-scrollbar:hover ::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1607843137);
+}
+html ::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.1411764706);
+}
+html ::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1411764706);
+  border-radius: 10px;
 }
 
 body {
@@ -21,13 +36,6 @@ main {
 div {
   margin: 0;
   padding: 0;
-}
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 a {
@@ -155,12 +163,27 @@ body #home section.stats .stat .value {
   min-height: 50%;
   display: flex;
   flex: 1 1 auto;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 body #home section.stats .stat .value h2 {
   font-size: 2.5rem;
   text-align: center;
+}
+body #home section.stats .stat .value .change {
+  font-size: 3rem;
+  width: 50px;
+  line-height: 1;
+  color: #ffffff;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 15px;
+}
+body #home section.stats .stat .value .change:hover {
+  background: rgba(255, 255, 255, 0.1411764706);
 }
 body #home section.about {
   background: rgba(255, 255, 255, 0.1411764706);

@@ -48,11 +48,26 @@ body {
 						min-height: 50%;
 						display: flex;
 						flex: 1 1 auto;
-						justify-content: center;
+						justify-content: space-around;
 						align-items: center;
 						h2 {
 							font-size: 2.5rem;
 							text-align: center;
+						}
+						.change {
+							font-size: 3rem;
+							width: 50px;
+							line-height: 1;
+							color: $white;
+							height: 80%;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							cursor: pointer;
+							border-radius: 15px;
+							&:hover {
+								background: $background_12dp;
+							}
 						}
 					}
 				}

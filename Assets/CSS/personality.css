@@ -1,5 +1,20 @@
 html {
   margin: 0;
+  overflow-y: overlay;
+}
+html ::-webkit-scrollbar {
+  width: 20px;
+  background-color: #121212;
+}
+html ::-webkit-scrollbar:hover ::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1607843137);
+}
+html ::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.1411764706);
+}
+html ::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1411764706);
+  border-radius: 10px;
 }
 
 body {
@@ -21,13 +36,6 @@ main {
 div {
   margin: 0;
   padding: 0;
-}
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 a {
@@ -221,6 +229,7 @@ header nav a.active {
 #personality .personality-container .personality .desc .index .value .col {
   height: 20px;
   width: 20px;
+  border-radius: 5px;
   border: 2px solid #ffffff;
   margin-right: 5px;
 }
@@ -228,7 +237,8 @@ header nav a.active {
   background: linear-gradient(to left, #0062b4, #0086d6);
 }
 #personality .personality-container .personality .desc p {
-  padding: 5px;
+  padding: 10px;
+  font-weight: 600;
 }
 
 @-webkit-keyframes anim-i {
