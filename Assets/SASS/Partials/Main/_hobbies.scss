@@ -1,0 +1,44 @@
+#hobbies {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px;
+	max-width: 1400px;
+	width: 100%;
+	margin: 20px 0px;
+	.hobby {
+		min-height: 400px;
+		width: 100%;
+		background: $background_12dp;
+		border-radius: 25px;
+		.image {
+			background-size: cover;
+			background-position: center;
+			height: 45%;
+			border-radius: 15px 15px 0px 0px;
+			box-shadow: inset 0px 0px 30px 15px rgba(255, 255, 255, 0.45);
+		}
+		.title {
+			width: 100%;
+			font-size: 2rem;
+			font-weight: 600;
+			color: $white;
+			background: $background_12dp;
+			text-align: center;
+			position: relative;
+			.date {
+				position: absolute;
+				right: 5px;
+				top: -15px;
+				font-size: 1.5rem;
+				font-weight: 800;
+				color: $black;
+				text-shadow: -1px -1px 0 $white, 1px -1px 0 $white,
+					-1px 1px 0 $white, 1px 1px 0 $white;
+			}
+		}
+		.about {
+			padding: 10px;
+			font-weight: 600;
+		}
+	}
+}

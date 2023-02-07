@@ -22,7 +22,8 @@
 	}
 	body {
 		#home,
-		#personality {
+		#personality,
+		#hobbies {
 			width: calc(100% - 40px);
 		}
 		#personality {
@@ -64,6 +65,9 @@
 					}
 				}
 			}
+		}
+		#hobbies {
+			grid-template-columns: 1fr 1fr;
 		}
 	}
 }
@@ -112,6 +116,9 @@
 					}
 				}
 			}
+		}
+		#hobbies {
+			grid-template-columns: 1fr;
 		}
 	}
 }
