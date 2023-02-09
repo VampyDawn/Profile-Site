@@ -2,11 +2,12 @@
 const novelsContainer = document.getElementById('lightnovels');
 import data from "./database.json" assert { type: "json" };
 var novels = data.lightNovels;
+var sortName = false;
+var sortStatus = false;
+var sortProgress = true;
 
 function updateLightNovels(novels) {
-	novels.sort((a, b) => {
-		return a.name > b.name ? 1 : -1;
-	});
+    sortNovels(novels);
     for (var i = 0; i < novels.length; i++) {
         var novel = document.createElement('div');
         novel.setAttribute('class', 'novel');
@@ -31,3 +32,24 @@ function updateLightNovels(novels) {
 	}
 }
 updateLightNovels(novels);
+
+function sortNovels(novels) {
+    if (sortName) {
+        novels.sort((a, b) => {
+            return a.name > b.name ? 1 : -1;
+        });
+    }
+    if (sortStatus) {
+        novels.sort((a, b) => {
+            return a.status > b.status ? 1 : -1;
+        });
+    }
+    if (sortProgress) {
+        novels.sort((a, b) => {
+            return a.progressC < b.progressC ? 1 : -1;
+        });
+        novels.sort((a, b) => {
+            return a.progressV > b.progressV ? 1 : -1;
+        });
+    }
+}
