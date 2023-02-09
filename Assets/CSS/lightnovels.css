@@ -95,6 +95,111 @@ header nav a.active {
   cursor: default;
 }
 
+#lightnovels {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1400px;
+  width: 100%;
+  margin: 20px 0px;
+}
+#lightnovels .index {
+  display: grid;
+  grid-template-columns: 0.75fr 5fr 2fr 2fr;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.1411764706);
+}
+#lightnovels .novel {
+  display: grid;
+  grid-template-columns: 0.75fr 5fr 2fr 2fr;
+  height: 75px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1411764706);
+  border-radius: 25px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+#lightnovels .novel .image_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#lightnovels .novel .image_container .image {
+  border-radius: 5px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  width: 60px;
+  height: 60px;
+}
+#lightnovels .novel .image_container .image_large {
+  display: none;
+  position: absolute;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 25px;
+  height: 325px;
+  width: 230px;
+  z-index: 1;
+  left: -250px;
+}
+#lightnovels .novel .image_container:hover .image_large {
+  display: block;
+}
+#lightnovels .novel .title {
+  font-weight: 600;
+}
+#lightnovels .novel .title a:hover {
+  text-decoration: underline;
+}
+#lightnovels .novel .status {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#lightnovels .novel .status p {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0px 10px;
+  border-radius: 15px;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.0901960784), 1px -1px 0 rgba(0, 0, 0, 0.0901960784), -1px 1px 0 rgba(0, 0, 0, 0.0901960784), 1px 1px 0 rgba(0, 0, 0, 0.0901960784);
+}
+#lightnovels .novel .status p.completed {
+  background: #53d528;
+}
+#lightnovels .novel .status p.dropped {
+  background: #e23e3e;
+}
+#lightnovels .novel .status p.reading {
+  background: #fbce3b;
+}
+#lightnovels .novel .status p.paused {
+  background: #9256f3;
+}
+#lightnovels .novel .status p.planning {
+  background: #1190e6;
+}
+#lightnovels .novel .progress {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#lightnovels .novel:last-child .image_container .image_large {
+  bottom: 0;
+}
+
 footer {
   border-radius: 25px 25px 0px 0px;
   max-width: 1400px;
@@ -132,8 +237,9 @@ footer .contacts .contact {
     width: 100%;
   }
   body #home,
-body #personality,
-body #hobbies {
+  body #personality,
+  body #hobbies,
+  body #lightnovels {
     width: calc(100% - 40px);
   }
   body #personality .personality-container .personality:nth-child(1) {
@@ -170,6 +276,66 @@ body #hobbies {
   }
   body #hobbies {
     grid-template-columns: 1fr 1fr;
+  }
+  body #lightnovels {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  body #lightnovels .index {
+    display: none;
+  }
+  body #lightnovels .novel {
+    max-width: calc(50% - 20px);
+    min-width: 450px;
+    min-height: 400px;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2fr 1fr 1fr;
+  }
+  body #lightnovels .novel .image_container {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    height: 100%;
+    width: 100%;
+  }
+  body #lightnovels .novel .image_container .image {
+    display: none;
+  }
+  body #lightnovels .novel .image_container .image_large {
+    background-size: cover;
+    display: block;
+    position: relative;
+    left: 0;
+    height: calc(100% - 30px);
+    width: calc(100% - 30px);
+    border-radius: 10px;
+  }
+  body #lightnovels .novel .title {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding: 10px;
+  }
+  body #lightnovels .novel .status {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  body #lightnovels .novel .progress {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+}
+@media (max-width: 992px) {
+  header nav a:last-child {
+    display: none;
+  }
+  body #lightnovels {
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  body #lightnovels .novel {
+    max-width: 100%;
   }
 }
 @media (max-width: 790px) {
@@ -213,6 +379,49 @@ body #hobbies {
   body #hobbies {
     grid-template-columns: 1fr;
   }
+  body #lightnovels {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  body #lightnovels .novel {
+    max-width: 100%;
+    min-height: 400px;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 5fr 1fr 1fr;
+  }
+  body #lightnovels .novel .image_container {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    height: 100%;
+    width: 100%;
+  }
+  body #lightnovels .novel .image_container .image {
+    display: none;
+  }
+  body #lightnovels .novel .image_container .image_large {
+    background-size: cover;
+    display: block;
+    position: relative;
+    left: 0;
+    height: calc(100% - 30px);
+    width: 50%;
+    border-radius: 10px;
+  }
+  body #lightnovels .novel .title {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    padding: 10px;
+  }
+  body #lightnovels .novel .status {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  body #lightnovels .novel .progress {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
 }
 @media (max-width: 700px) {
   header .banner {
@@ -226,5 +435,42 @@ body #hobbies {
   body #home section.stats .stat:nth-child(1) {
     border-radius: 25px 15px 15px 15px;
     grid-column: 1/2;
+  }
+  body #lightnovels {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  body #lightnovels .novel {
+    max-width: 100%;
+    min-width: 0px;
+    min-height: 300px;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  body #lightnovels .novel .image_container {
+    grid-column: auto;
+    grid-row: auto;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+  }
+  body #lightnovels .novel .image_container .image_large {
+    display: none;
+  }
+  body #lightnovels .novel .title {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  body #lightnovels .novel .status {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  body #lightnovels .novel .progress {
+    grid-column: auto;
+    grid-row: auto;
   }
 }/*# sourceMappingURL=lightnovels.css.map */

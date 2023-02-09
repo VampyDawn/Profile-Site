@@ -23,7 +23,8 @@
 	body {
 		#home,
 		#personality,
-		#hobbies {
+		#hobbies,
+		#lightnovels {
 			width: calc(100% - 40px);
 		}
 		#personality {
@@ -68,6 +69,75 @@
 		}
 		#hobbies {
 			grid-template-columns: 1fr 1fr;
+		}
+		#lightnovels {
+			flex-direction: row;
+			flex-wrap: wrap;
+			.index {
+				display: none;
+			}
+			.novel {
+				max-width: calc(50% - 20px);
+				min-width: 450px;
+				min-height: 400px;
+				grid-template-columns: 2fr 2fr;
+				grid-template-rows: 2fr 1fr 1fr;
+				.image_container {
+					grid-column: 1/2;
+					grid-row: 1/4;
+					height: 100%;
+					width: 100%;
+					.image {
+						display: none;
+						&_large {
+							background-size: cover;
+							display: block;
+							position: relative;
+							left: 0;
+							height: calc(100% - 30px);
+							width: calc(100% - 30px);
+							border-radius: 10px;
+						}
+					}
+				}
+				.title {
+					grid-column: 2/3;
+					grid-row: 1/2;
+					padding: 10px;
+				}
+				.status {
+					grid-column: 2/3;
+					grid-row: 2/3;
+				}
+				.progress {
+					grid-column: 2/3;
+					grid-row: 3/4;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $br-ml) {
+	header {
+		nav {
+			a {
+				&:last-child {
+					display: none;
+				}
+			}
+		}
+	}
+	body {
+		#lightnovels {
+			display: none;
+			flex-direction: column;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			.novel {
+				max-width: 100%;
+			}
 		}
 	}
 }
@@ -120,6 +190,49 @@
 		#hobbies {
 			grid-template-columns: 1fr;
 		}
+		#lightnovels {
+			flex-direction: column;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			.novel {
+				max-width: 100%;
+				min-height: 400px;
+				grid-template-columns: 2fr 2fr;
+				grid-template-rows: 5fr 1fr 1fr;
+				.image_container {
+					grid-column: 1/3;
+					grid-row: 1/2;
+					height: 100%;
+					width: 100%;
+					.image {
+						display: none;
+						&_large {
+							background-size: cover;
+							display: block;
+							position: relative;
+							left: 0;
+							height: calc(100% - 30px);
+							width: 50%;
+							border-radius: 10px;
+						}
+					}
+				}
+				.title {
+					grid-column: 1/3;
+					grid-row: 2/3;
+					padding: 10px;
+				}
+				.status {
+					grid-column: 1/2;
+					grid-row: 3/4;
+				}
+				.progress {
+					grid-column: 2/3;
+					grid-row: 3/4;
+				}
+			}
+		}
 	}
 }
 
@@ -142,6 +255,42 @@
 							grid-column: 1/2;
 						}
 					}
+				}
+			}
+		}
+		#lightnovels {
+			flex-direction: column;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			.novel {
+				max-width: 100%;
+				min-width: 0px;
+				min-height: 300px;
+				max-height: fit-content;
+				grid-template-columns: 1fr;
+				grid-template-rows: auto;
+				.image_container {
+					grid-column: auto;
+					grid-row: auto;
+					gap: 20px;
+					height: 100%;
+					width: 100%;
+					.image_large {
+						display: none;
+					}
+				}
+				.title {
+					grid-column: auto;
+					grid-row: auto;
+				}
+				.status {
+					grid-column: auto;
+					grid-row: auto;
+				}
+				.progress {
+					grid-column: auto;
+					grid-row: auto;
 				}
 			}
 		}

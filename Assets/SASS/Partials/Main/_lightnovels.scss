@@ -1,0 +1,113 @@
+#lightnovels {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	max-width: 1400px;
+	width: 100%;
+	margin: 20px 0px;
+	.index {
+		display: grid;
+		grid-template-columns: 0.75fr 5fr 2fr 2fr;
+		height: 50px;
+		width: 100%;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		color: $white;
+		font-size: 1.5rem;
+		border-bottom: 3px solid $background_12dp;
+	}
+	.novel {
+		display: grid;
+		grid-template-columns: 0.75fr 5fr 2fr 2fr;
+		height: 75px;
+		width: 100%;
+		background: $background_12dp;
+		border-radius: 25px;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		color: $white;
+		font-size: 1.5rem;
+		.image_container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			.image {
+				border-radius: 5px;
+				background-size: cover;
+				background-repeat: no-repeat;
+				overflow: hidden;
+				width: 60px;
+				height: 60px;
+				&_large {
+					display: none;
+					position: absolute;
+					background-size: contain;
+					background-position: center;
+					background-repeat: no-repeat;
+					border-radius: 25px;
+					height: 325px;
+					width: 230px;
+					z-index: 1;
+					left: -250px;
+				}
+			}
+			&:hover {
+				.image_large {
+					display: block;
+				}
+			}
+		}
+		.title {
+			font-weight: 600;
+			a {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		.status {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			p {
+				width: fit-content;
+				padding: 0px 10px;
+				border-radius: 15px;
+				$border-color: #00000017;
+				text-shadow: -1px -1px 0 $border-color, 1px -1px 0 $border-color,
+					-1px 1px 0 $border-color, 1px 1px 0 $border-color;
+				&.completed {
+					background: $completed;
+				}
+				&.dropped {
+					background: $dropped;
+				}
+				&.reading {
+					background: $reading;
+				}
+				&.paused {
+					background: $paused;
+				}
+				&.planning {
+					background: $planning;
+				}
+			}
+		}
+		.progress {
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+		}
+		&:last-child {
+			.image_container {
+				.image_large {
+					bottom: 0;
+				}
+			}
+		}
+	}
+}

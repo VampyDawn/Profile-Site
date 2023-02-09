@@ -1,5 +1,348 @@
 {
-	"name": "Name",
-	"url": "Url",
-	"img": "Img"
+	"lightNovels": [
+		{
+			"name": "Sexiled: My Sexist Party Leader Kicked Me Out, So I Teamed Up With a Mythical Sorceress!",
+			"url": "https://anilist.co/manga/110411/Sexiled-My-Sexist-Party-Leader-Kicked-Me-Out-So-I-Teamed-Up-With-a-Mythical-Sorceress/",
+			"img": "Sexiled.jpg",
+			"status": "completed",
+			"progressV": 2,
+			"progressC": 22
+		},
+		{
+			"name": "Didn't I Say to Make My Abilities Average in the Next Life?!",
+			"url": "https://anilist.co/manga/99102/Didnt-I-Say-to-Make-My-Abilities-Average-in-the-Next-Life/",
+			"img": "Abilities Average.jpg",
+			"status": "paused",
+			"progressV": 11,
+			"progressC": 110
+		},
+		{
+			"name": "I Shall Survive Using Potions!",
+			"url": "https://anilist.co/manga/99104/I-Shall-Survive-Using-Potions/",
+			"img": "Survive Potions.jpg",
+			"status": "paused",
+			"progressV": 6,
+			"progressC": 63
+		},
+		{
+			"name": "I've Been Killing Slimes for 300 Years and Maxed Out My Level",
+			"url": "https://anilist.co/manga/100068/Ive-Been-Killing-Slimes-for-300-Years-and-Maxed-Out-My-Level/",
+			"img": "300 Years.jpg",
+			"status": "paused",
+			"progressV": 7,
+			"progressC": 79
+		},
+		{
+			"name": "Kuma Kuma Kuma Bear",
+			"url": "https://anilist.co/manga/97929/Kuma-Kuma-Kuma-Bear/",
+			"img": "Kuma Kuma Kuma Bear.jpg",
+			"status": "reading",
+			"progressV": 13,
+			"progressC": 408
+		},
+		{
+			"name": "Reincarnated as a Sword",
+			"url": "https://anilist.co/manga/97466/Reincarnated-as-a-Sword/",
+			"img": "Reincarnated as a Sword.jpg",
+			"status": "paused",
+			"progressV": 11,
+			"progressC": 90
+		},
+		{
+			"name": "Skeleton Knight in Another World",
+			"url": "https://anilist.co/manga/87239/Skeleton-Knight-in-Another-World/",
+			"img": "Skeleton Knight in Another World.jpg",
+			"status": "paused",
+			"progressV": 7,
+			"progressC": 53
+		},
+		{
+			"name": "So I'm a Spider, So What?",
+			"url": "https://anilist.co/manga/86406/So-Im-a-Spider-So-What/",
+			"img": "So Im a Spider, So What.jpg",
+			"status": "reading",
+			"progressV": 14,
+			"progressC": 326
+		},
+		{
+			"name": "That Time I Got Reincarnated as a Slime",
+			"url": "https://anilist.co/manga/86355/That-Time-I-Got-Reincarnated-as-a-Slime/",
+			"img": "That Time I Got Reincarnated as a Slime.jpg",
+			"status": "paused",
+			"progressV": 15,
+			"progressC": 120
+		},
+		{
+			"name": "The Weakest Tamer Began a Journey to Pick Up Trash",
+			"url": "https://anilist.co/manga/118986/The-Weakest-Tamer-Began-a-Journey-to-Pick-Up-Trash/",
+			"img": "The Weakest Tamer Began a Journey to Pick Up Trash.jpg",
+			"status": "reading",
+			"progressV": 1,
+			"progressC": 75
+		},
+		{
+			"name": "Otome Game no Heroine de Saikyou Survival",
+			"url": "https://anilist.co/manga/144071/Otome-Game-no-Heroine-de-Saikyou-Survival/",
+			"img": "Otome Game no Heroine de Saikyou Survival.jpg",
+			"status": "planning",
+			"progressV": 0,
+			"progressC": 0
+		},
+		{
+			"name": "The Magical Revolution of the Reincarnated Princess and the Genius Young Lady",
+			"url": "https://anilist.co/manga/114920/The-Magical-Revolution-of-the-Reincarnated-Princess-and-the-Genius-Young-Lady/",
+			"img": "The Magical Revolution of the Reincarnated Princess and the Genius Young Lady.jpg",
+			"status": "planning",
+			"progressV": 0,
+			"progressC": 0
+		},
+		{
+			"name": "Campfire Cooking in Another World with My Absurd Skill",
+			"url": "https://anilist.co/manga/99049/Campfire-Cooking-in-Another-World-with-My-Absurd-Skill/",
+			"img": "Campfire Cooking in Another World with My Absurd Skill.jpg",
+			"status": "paused",
+			"progressV": 11,
+			"progressC": 110
+		},
+		{
+			"name": "How NOT to Summon a Demon Lord",
+			"url": "https://anilist.co/manga/93368/How-NOT-to-Summon-a-Demon-Lord/",
+			"img": "How NOT to Summon a Demon Lord.jpg",
+			"status": "paused",
+			"progressV": 3,
+			"progressC": 12
+		},
+		{
+			"name": "In the Land of Leadale",
+			"url": "https://anilist.co/manga/119352/In-the-Land-of-Leadale/",
+			"img": "In the Land of Leadale.jpg",
+			"status": "paused",
+			"progressV": 6,
+			"progressC": 48
+		},
+		{
+			"name": "My Daughter Left the Nest and Returned an S-Rank Adventurer",
+			"url": "https://anilist.co/manga/102475/My-Daughter-Left-the-Nest-and-Returned-an-SRank-Adventurer/",
+			"img": "My Daughter Left the Nest and Returned an S-Rank Adventurer.jpg",
+			"status": "paused",
+			"progressV": 4,
+			"progressC": 66
+		},
+		{
+			"name": "Now I'm a Demon Lord! Happily Ever After with Monster Girls in My Dungeon",
+			"url": "https://anilist.co/manga/103641/Now-Im-a-Demon-Lord-Happily-Ever-After-with-Monster-Girls-in-My-Dungeon/",
+			"img": "Now I'm a Demon Lord! Happily Ever After with Monster Girls in My Dungeon.jpg",
+			"status": "planning",
+			"progressV": 0,
+			"progressC": 0
+		},
+		{
+			"name": "Overlord",
+			"url": "https://anilist.co/manga/85976/Overlord/",
+			"img": "Overlord.png",
+			"status": "paused",
+			"progressV": 14,
+			"progressC": 96
+		},
+		{
+			"name": "Reborn as a Vending Machine, I Now Wander the Dungeon",
+			"url": "https://anilist.co/manga/97406/Reborn-as-a-Vending-Machine-I-Now-Wander-the-Dungeon/",
+			"img": "Reborn as a Vending Machine, I Now Wander the Dungeon.jpg",
+			"status": "paused",
+			"progressV": 3,
+			"progressC": 83
+		},
+		{
+			"name": "Tensei Kyuuketsuki-san wa Ohirune ga Shitai",
+			"url": "https://anilist.co/manga/100760/Tensei-Kyuuketsukisan-wa-Ohirune-ga-Shitai/",
+			"img": "Tensei Kyuuketsuki-san wa Ohirune ga Shitai.jpg",
+			"status": "paused",
+			"progressV": 3,
+			"progressC": 65
+		},
+		{
+			"name": "The Alchemist Who Survived Now Dreams of a Quiet City Life",
+			"url": "https://anilist.co/manga/101738/The-Alchemist-Who-Survived-Now-Dreams-of-a-Quiet-City-Life/",
+			"img": "The Alchemist Who Survived Now Dreams of a Quiet City Life.jpg",
+			"status": "paused",
+			"progressV": 2,
+			"progressC": 17
+		},
+		{
+			"name": "The Combat Baker and Automaton Waitress",
+			"url": "https://anilist.co/manga/99377/The-Combat-Baker-and-Automaton-Waitress/",
+			"img": "The Combat Baker and Automaton Waitress.jpg",
+			"status": "paused",
+			"progressV": 2,
+			"progressC": 20
+		},
+		{
+			"name": "The Saga of Tanya the Evil",
+			"url": "https://anilist.co/manga/94846/The-Saga-of-Tanya-the-Evil/",
+			"img": "The Saga of Tanya the Evil.jpg",
+			"status": "paused",
+			"progressV": 4,
+			"progressC": 20
+		},
+		{
+			"name": "Wandering Witch: The Journey of Elaina",
+			"url": "https://anilist.co/manga/98741/Wandering-Witch-The-Journey-of-Elaina/",
+			"img": "Wandering Witch The Journey of Elaina.jpg",
+			"status": "planning",
+			"progressV": 0,
+			"progressC": 0
+		},
+		{
+			"name": "Welcome to the Outcast’s Restaurant!",
+			"url": "https://anilist.co/manga/123271/Welcome-to-the-Outcasts-Restaurant/",
+			"img": "Welcome to the Outcast’s Restaurant!.jpg",
+			"status": "paused",
+			"progressV": 2,
+			"progressC": 21
+		},
+		{
+			"name": "A Lily Blooms in Another World",
+			"url": "https://anilist.co/manga/121358/A-Lily-Blooms-in-Another-World/",
+			"img": "A Lily Blooms in Another World.jpg",
+			"status": "completed",
+			"progressV": 34,
+			"progressC": 1
+		},
+		{
+			"name": "The NPCs in this Village Sim Game Must Be Real!",
+			"url": "https://anilist.co/manga/113784/The-NPCs-in-this-Village-Sim-Game-Must-Be-Real/",
+			"img": "The NPCs in this Village Sim Game Must Be Real!.jpg",
+			"status": "completed",
+			"progressV": 4,
+			"progressC": 79
+		},
+		{
+			"name": "Yuri Elf to Norowareta Hime",
+			"url": "https://anilist.co/manga/106459/Yuri-Elf-to-Norowareta-Hime/",
+			"img": "Yuri Elf to Norowareta Hime.jpg",
+			"status": "completed",
+			"progressV": 1,
+			"progressC": 6
+		},
+		{
+			"name": "Ascendance of a Bookworm: Part 1",
+			"url": "https://anilist.co/manga/87383/Ascendance-of-a-Bookworm-Part-1/",
+			"img": "Ascendance of a Bookworm Part 1.jpg",
+			"status": "dropped",
+			"progressV": 1,
+			"progressC": 3
+		},
+		{
+			"name": "Dragon-san wa Tomodachi ga Hoshii!",
+			"url": "https://anilist.co/manga/95938/Dragonsan-wa-Tomodachi-ga-Hoshii/",
+			"img": "Dragon-san wa Tomodachi ga Hoshii!.jpg",
+			"status": "dropped",
+			"progressV": 1,
+			"progressC": 33
+		},
+		{
+			"name": "Her Majesty’s Swarm",
+			"url": "https://anilist.co/manga/123329/Her-Majestys-Swarm/",
+			"img": "Her Majesty’s Swarm.jpg",
+			"status": "dropped",
+			"progressV": 1,
+			"progressC": 12
+		},
+		{
+			"name": "Heroine na Imouto, Akuyaku Reijou na Watashi",
+			"url": "https://anilist.co/manga/122353/Heroine-na-Imouto-Akuyaku-Reijou-na-Watashi/",
+			"img": "Heroine na Imouto, Akuyaku Reijou na Watashi.jpg",
+			"status": "dropped",
+			"progressV": 1,
+			"progressC": 21
+		},
+		{
+			"name": "If It’s for My Daughter, I’d Even Defeat a Demon Lord",
+			"url": "https://anilist.co/manga/87376/If-Its-for-My-Daughter-Id-Even-Defeat-a-Demon-Lord/",
+			"img": "If It’s for My Daughter, I’d Even Defeat a Demon Lord.jpg",
+			"status": "dropped",
+			"progressV": 4,
+			"progressC": 30
+		},
+		{
+			"name": "I’m in Love with the Villainess",
+			"url": "https://anilist.co/manga/109206/Im-in-Love-with-the-Villainess/",
+			"img": "I’m in Love with the Villainess.jpg",
+			"status": "dropped",
+			"progressV": 0,
+			"progressC": 1
+		},
+		{
+			"name": "My Quiet Blacksmith Life in Another World",
+			"url": "https://anilist.co/manga/127010/My-Quiet-Blacksmith-Life-in-Another-World/",
+			"img": "My Quiet Blacksmith Life in Another World.jpg",
+			"status": "dropped",
+			"progressV": 3,
+			"progressC": 30
+		},
+		{
+			"name": "Prison Life is Easy for a Villainess",
+			"url": "https://anilist.co/manga/110820/Prison-Life-is-Easy-for-a-Villainess/",
+			"img": "Prison Life is Easy for a Villainess.jpg",
+			"status": "dropped",
+			"progressV": 1,
+			"progressC": 28
+		},
+		{
+			"name": "The Executioner and Her Way of Life",
+			"url": "https://anilist.co/manga/110683/The-Executioner-and-Her-Way-of-Life/",
+			"img": "The Executioner and Her Way of Life.jpg",
+			"status": "dropped",
+			"progressV": 1,
+			"progressC": 9
+		},
+		{
+			"name": "There’s No Freaking Way I’ll be Your Lover! Unless…",
+			"url": "https://anilist.co/manga/122462/Theres-No-Freaking-Way-Ill-be-Your-Lover-Unless/",
+			"img": "There’s No Freaking Way I’ll be Your Lover! Unless….jpg",
+			"status": "dropped",
+			"progressV": 1,
+			"progressC": 6
+		},
+		{
+			"name": "Why Shouldn’t a Detestable Demon Lord Fall in Love?!",
+			"url": "https://anilist.co/manga/112256/Why-Shouldnt-a-Detestable-Demon-Lord-Fall-in-Love/",
+			"img": "Why Shouldn’t a Detestable Demon Lord Fall in Love!.jpg",
+			"status": "dropped",
+			"progressV": 2,
+			"progressC": 10
+		},
+		{
+			"name": "Making Magic: The Sweet Life of a Witch Who Knows an Infinite MP Loophole",
+			"url": "https://anilist.co/manga/136865/Making-Magic-The-Sweet-Life-of-a-Witch-Who-Knows-an-Infinite-MP-Loophole/",
+			"img": "Making Magic The Sweet Life of a Witch Who Knows an Infinite MP Loophole.jpg",
+			"status": "planning",
+			"progressV": 0,
+			"progressC": 0
+		},
+		{
+			"name": "Reincarnated as an Apple: This Forbidden Fruit Is Forever Unblemished!",
+			"url": "https://anilist.co/manga/158938/Reincarnated-as-an-Apple-This-Forbidden-Fruit-Is-Forever-Unblemished/",
+			"img": "Reincarnated as an Apple This Forbidden Fruit Is Forever Unblemished!.jpg",
+			"status": "planning",
+			"progressV": 0,
+			"progressC": 0
+		},
+		{
+			"name": "The Invincible Little Lady",
+			"url": "https://anilist.co/manga/111704/The-Invincible-Little-Lady/",
+			"img": "The Invincible Little Lady.jpg",
+			"status": "planning",
+			"progressV": 0,
+			"progressC": 0
+		},
+		{
+			"name": "The Unwanted Undead Adventurer",
+			"url": "https://anilist.co/manga/101770/The-Unwanted-Undead-Adventurer/",
+			"img": "The Unwanted Undead Adventurer.jpg",
+			"status": "planning",
+			"progressV": 0,
+			"progressC": 0
+		}
+	]
 }
