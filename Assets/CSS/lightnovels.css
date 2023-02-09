@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   margin: 0;
   overflow-y: overlay;
@@ -115,7 +116,29 @@ header nav a.active {
   font-size: 1.5rem;
   border-bottom: 3px solid rgba(255, 255, 255, 0.1411764706);
 }
-#lightnovels .novel {
+#lightnovels .index .sortOpt:hover {
+  cursor: pointer;
+}
+#lightnovels .index .sortOpt.selected::after {
+  content: "*";
+  font-size: 0.75rem;
+  color: #ffffff;
+  position: relative;
+  left: 5px;
+}
+#lightnovels .index .sortOpt.selected.desc::after {
+  content: "▲";
+  bottom: 6px;
+}
+#lightnovels .index .sortOpt.selected.asc::after {
+  content: "▼";
+}
+#lightnovels #lnlist {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#lightnovels #lnlist .novel {
   display: grid;
   grid-template-columns: 0.75fr 5fr 2fr 2fr;
   height: 75px;
@@ -128,13 +151,13 @@ header nav a.active {
   color: #ffffff;
   font-size: 1.5rem;
 }
-#lightnovels .novel .image_container {
+#lightnovels #lnlist .novel .image_container {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-#lightnovels .novel .image_container .image {
+#lightnovels #lnlist .novel .image_container .image {
   border-radius: 5px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -142,7 +165,7 @@ header nav a.active {
   width: 60px;
   height: 60px;
 }
-#lightnovels .novel .image_container .image_large {
+#lightnovels #lnlist .novel .image_container .image_large {
   display: none;
   position: absolute;
   background-size: contain;
@@ -154,49 +177,49 @@ header nav a.active {
   z-index: 1;
   left: -250px;
 }
-#lightnovels .novel .image_container:hover .image_large {
+#lightnovels #lnlist .novel .image_container:hover .image_large {
   display: block;
 }
-#lightnovels .novel .title {
+#lightnovels #lnlist .novel .title {
   font-weight: 600;
 }
-#lightnovels .novel .title a:hover {
+#lightnovels #lnlist .novel .title a:hover {
   text-decoration: underline;
 }
-#lightnovels .novel .status {
+#lightnovels #lnlist .novel .status {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#lightnovels .novel .status p {
+#lightnovels #lnlist .novel .status p {
   width: -moz-fit-content;
   width: fit-content;
   padding: 0px 10px;
   border-radius: 15px;
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.0901960784), 1px -1px 0 rgba(0, 0, 0, 0.0901960784), -1px 1px 0 rgba(0, 0, 0, 0.0901960784), 1px 1px 0 rgba(0, 0, 0, 0.0901960784);
 }
-#lightnovels .novel .status p.completed {
+#lightnovels #lnlist .novel .status p.completed {
   background: #53d528;
 }
-#lightnovels .novel .status p.dropped {
+#lightnovels #lnlist .novel .status p.dropped {
   background: #e23e3e;
 }
-#lightnovels .novel .status p.reading {
+#lightnovels #lnlist .novel .status p.reading {
   background: #fbce3b;
 }
-#lightnovels .novel .status p.paused {
+#lightnovels #lnlist .novel .status p.paused {
   background: #9256f3;
 }
-#lightnovels .novel .status p.planning {
+#lightnovels #lnlist .novel .status p.planning {
   background: #1190e6;
 }
-#lightnovels .novel .progress {
+#lightnovels #lnlist .novel .progress {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-#lightnovels .novel:last-child .image_container .image_large {
+#lightnovels #lnlist .novel:last-child .image_container .image_large {
   bottom: 0;
 }
 
