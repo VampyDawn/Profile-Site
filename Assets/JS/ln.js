@@ -2,9 +2,9 @@
 const novelsContainer = document.getElementById('lightnovels');
 import data from "./database.json" assert { type: "json" };
 var novels = data.lightNovels;
-var sortName = false;
+var sortName = true;
 var sortStatus = false;
-var sortProgress = true;
+var sortProgress = false;
 
 function updateLightNovels(novels) {
     sortNovels(novels);
