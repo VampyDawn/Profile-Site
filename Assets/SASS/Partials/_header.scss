@@ -23,9 +23,16 @@ header {
 			padding: 0px 10px;
 			border-radius: 10px;
 			margin: 0px 5px;
+			user-select: none;
 			&.active {
 				background: $background_24dp;
 				cursor: default;
+			}
+			&:hover {
+				outline: 5px solid $background_24dp;
+				&.active {
+					outline: none;
+				}
 			}
 		}
 	}

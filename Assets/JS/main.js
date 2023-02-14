@@ -1,5 +1,7 @@
 const personality = document.getElementById("personality");
 const lightnovelspage = document.getElementById("lightnovels");
+const home = document.getElementById("home");
+const hobbies = document.getElementById("hobbies");
 let numberI = document.getElementById("number-i");
 let numberS = document.getElementById("number-s");
 let numberF = document.getElementById("number-f");
@@ -384,6 +386,12 @@ var data = {
 			link: "https://discordapp.com/users/591105550440464404",
 		},
 		{ name: "Sofi", link: "https://sofi.gg/profile/591105550440464404" },
+	],
+	nav: [
+		{ name: "Home", link: "./index.html" },
+		{ name: "Personality", link: "./personality.html" },
+		{ name: "Hobbies", link: "./hobbies.html" },
+		{ name: "Light Novels", link: "./lightnovels.html" },
 	],
 };
 
@@ -778,3 +786,28 @@ function addContacts() {
 	}
 }
 addContacts();
+
+const navContainer = document.getElementById("nav");
+var navLinks = data.nav;
+function makeNav() {
+	for (var i = 0; i < navLinks.length; i++) {
+		var link = document.createElement("a");
+		link.setAttribute("href", navLinks[i].link);
+		if (home && navLinks[i].name == "Home") {
+			link.setAttribute("class", "active");
+			link.removeAttribute("href");
+		} else if (personality && navLinks[i].name == "Personality") {
+			link.setAttribute("class", "active");
+			link.removeAttribute("href");
+		} else if (hobbies && navLinks[i].name == "Hobbies") {
+			link.setAttribute("class", "active");
+			link.removeAttribute("href");
+		} else if (lightnovelspage && navLinks[i].name == "Light Novels") {
+			link.setAttribute("class", "active");
+			link.removeAttribute("href");
+		}
+		link.innerHTML = navLinks[i].name;
+		navContainer.appendChild(link);
+	}
+}
+makeNav();

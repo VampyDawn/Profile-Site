@@ -16,29 +16,32 @@
 		color: $white;
 		font-size: 1.5rem;
 		border-bottom: 3px solid $background_12dp;
+		user-select: none;
 		.sortOpt {
 			&:hover {
 				cursor: pointer;
 			}
 			&.selected {
-				&::after {
-					content: "*";
-					font-size: 0.75rem;
-					color: $white;
-					position: relative;
-					left: 5px;
-				}
 				&.desc {
 					&::after {
-						content: "▲";
+						content: "↑";
 						bottom: 6px;
 					}
 				}
 				&.asc {
 					&::after {
-						content: "▼";
+						content: "↓";
 					}
 				}
+			}
+			&::after {
+				content: "↕";
+				white-space: pre;
+				font-size: 1rem;
+				color: $white;
+				position: relative;
+				left: 5px;
+				bottom: 3px;
 			}
 		}
 	}

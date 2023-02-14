@@ -13,7 +13,14 @@ footer {
 		height: 50px;
 		.contact {
 			margin: 0px 10px;
+			padding: 0px 10px;
 			font-size: 1.5rem;
+			user-select: none;
+			border-radius: 15px;
+			&:hover {
+				background: $background_24dp;
+				transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+			}
 		}
 	}
 }

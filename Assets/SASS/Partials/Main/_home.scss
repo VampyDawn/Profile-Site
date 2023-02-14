@@ -66,6 +66,7 @@ body {
 							align-items: center;
 							cursor: pointer;
 							border-radius: 15px;
+							user-select: none;
 							&:hover {
 								background: $background_12dp;
 							}

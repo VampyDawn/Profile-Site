@@ -89,10 +89,19 @@ header nav a {
   padding: 0px 10px;
   border-radius: 10px;
   margin: 0px 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 header nav a.active {
   background: rgba(255, 255, 255, 0.1607843137);
   cursor: default;
+}
+header nav a:hover {
+  outline: 5px solid rgba(255, 255, 255, 0.1607843137);
+}
+header nav a:hover.active {
+  outline: none;
 }
 
 #hobbies {
@@ -156,7 +165,16 @@ footer .contacts {
 }
 footer .contacts .contact {
   margin: 0px 10px;
+  padding: 0px 10px;
   font-size: 1.5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  border-radius: 15px;
+}
+footer .contacts .contact:hover {
+  background: rgba(255, 255, 255, 0.1607843137);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 @media (min-width: 1400px) {
