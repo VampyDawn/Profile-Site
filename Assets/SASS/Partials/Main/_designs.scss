@@ -16,6 +16,15 @@
 			background-repeat: no-repeat;
 			min-width: 300px;
 			height: 100%;
+			position: relative;
+			transition: all 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
+		}
+		&:hover {
+			.img {
+				transform: perspective(5000px) rotateY(var(--rotateY))
+					rotateX(var(--rotateX));
+				transition: all 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
+			}
 		}
 	}
 }

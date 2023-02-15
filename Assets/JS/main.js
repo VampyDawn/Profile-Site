@@ -808,6 +808,30 @@ if (designsPage) {
 		}
 	}
 	makeDesigns();
+
+	document.addEventListener("mousemove", (e) => {
+		if (
+			e.target.classList.contains("design") ||
+			e.target.classList.contains("img")
+		) {
+			rotateElement(e, e.target);
+		}
+	});
+
+	function rotateElement(event, element) {
+		const x = event.clientX;
+		const y = event.clientY;
+
+		const box = element.getBoundingClientRect();
+		const xCenter = (box.left + box.right) / 2;
+		const yCenter = (box.top + box.bottom) / 2;
+
+		const offsetX = ((x - xCenter) / xCenter) * 90;
+		const offsetY = ((y - yCenter) / yCenter) * 90;
+
+		element.style.setProperty("--rotateX", -1 * offsetY + "deg");
+		element.style.setProperty("--rotateY", offsetX + "deg");
+	}
 }
 
 const navContainer = document.getElementById("nav");
