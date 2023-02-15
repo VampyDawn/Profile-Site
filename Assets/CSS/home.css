@@ -352,7 +352,7 @@ footer .contacts .contact:hover {
   }
 }
 @media (max-width: 992px) {
-  header nav a:last-child {
+  header nav a:nth-child(4) {
     display: none;
   }
   body #lightnovels {
@@ -449,6 +449,11 @@ footer .contacts .contact:hover {
   body #lightnovels .novel .progress {
     grid-column: 2/3;
     grid-row: 3/4;
+  }
+  footer .contacts {
+    height: 100%;
+    padding: 10px;
+    flex-direction: column;
   }
 }
 @media (max-width: 700px) {

@@ -392,6 +392,12 @@ var data = {
 		{ name: "Personality", link: "./personality.html" },
 		{ name: "Hobbies", link: "./hobbies.html" },
 		{ name: "Light Novels", link: "./lightnovels.html" },
+		{ name: "Designs", link: "./designs.html" },
+	],
+	designs: [
+		{ id: 1, url: "Cerberus.png" },
+		{ id: 2, url: "Gawr Gura.png" },
+		{ id: 3, url: "Shinobu Oshino.png" },
 	],
 };
 
@@ -787,6 +793,23 @@ function addContacts() {
 }
 addContacts();
 
+const designsPage = document.getElementById("designs");
+var designs = data.designs;
+if (designsPage) {
+	function makeDesigns() {
+		for (var i = 0; i < designs.length; i++) {
+			var design = document.createElement("div");
+			design.setAttribute("class", "design");
+			design.innerHTML =
+				`<div class="img" style="background-image: url('Assets/Images/Badges/` +
+				designs[i].url +
+				`')"></div>`;
+			designsPage.appendChild(design);
+		}
+	}
+	makeDesigns();
+}
+
 const navContainer = document.getElementById("nav");
 var navLinks = data.nav;
 function makeNav() {
@@ -803,6 +826,9 @@ function makeNav() {
 			link.setAttribute("class", "active");
 			link.removeAttribute("href");
 		} else if (lightnovelspage && navLinks[i].name == "Light Novels") {
+			link.setAttribute("class", "active");
+			link.removeAttribute("href");
+		} else if (designsPage && navLinks[i].name == "Designs") {
 			link.setAttribute("class", "active");
 			link.removeAttribute("href");
 		}

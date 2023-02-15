@@ -104,48 +104,26 @@ header nav a:hover.active {
   outline: none;
 }
 
-#hobbies {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+#designs {
+  width: 100%;
   max-width: 1400px;
-  width: 100%;
   margin: 20px 0px;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-#hobbies .hobby {
-  min-height: 400px;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.1411764706);
-  border-radius: 25px;
-}
-#hobbies .hobby .image {
-  background-size: cover;
-  background-position: center;
-  height: 45%;
-  border-radius: 15px 15px 0px 0px;
-  box-shadow: inset 0px 0px 30px 15px rgba(255, 255, 255, 0.45);
-}
-#hobbies .hobby .title {
-  width: 100%;
-  font-size: 2rem;
-  font-weight: 600;
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.1411764706);
-  text-align: center;
-  position: relative;
-}
-#hobbies .hobby .title .date {
-  position: absolute;
-  right: 5px;
-  top: -15px;
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: #000000;
-  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
-}
-#hobbies .hobby .about {
+#designs .design {
+  min-width: 300px;
+  height: 450px;
   padding: 10px;
-  font-weight: 600;
+}
+#designs .design .img {
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-width: 300px;
+  height: 100%;
 }
 
 footer {
@@ -435,4 +413,4 @@ footer .contacts .contact:hover {
     grid-column: auto;
     grid-row: auto;
   }
-}/*# sourceMappingURL=hobbies.css.map */
+}/*# sourceMappingURL=designs.css.map */
