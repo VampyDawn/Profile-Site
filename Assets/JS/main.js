@@ -395,8 +395,8 @@ var data = {
 		{ name: "Designs", link: "./designs.html" },
 	],
 	designs: [
-		{ id: 1, url: "Cerberus.png", background: "" },
-		{ id: 2, url: "Gawr Gura.png", background: "Gawr Gura Background.png" },
+		{ id: 1, url: "Cerberus.png", background: "Helltaker.png" },
+		{ id: 2, url: "Gawr Gura.png", background: "Water.png" },
 		{ id: 3, url: "Shinobu Oshino.png", background: "" },
 	],
 };
@@ -802,7 +802,9 @@ if (designsPage) {
 			design.setAttribute("class", "design");
 			design.style.setProperty(
 				"--badge-back",
-				`url("../Images/Badges/` + designs[i].background + `")`
+				`url("../Images/Badges/Backgrounds/` +
+					designs[i].background +
+					`")`
 			);
 			design.innerHTML =
 				`<div class="img" style="background-image: url('Assets/Images/Badges/` +
