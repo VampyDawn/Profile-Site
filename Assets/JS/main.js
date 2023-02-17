@@ -373,9 +373,9 @@ var data = {
 			name: "The Unwanted Undead Adventurer",
 			url: "https://anilist.co/manga/101770/The-Unwanted-Undead-Adventurer/",
 			img: "The Unwanted Undead Adventurer.jpg",
-			status: "planning",
+			status: "dropped",
 			progressV: 0,
-			progressC: 0,
+			progressC: 1,
 		},
 	],
 	contacts: [
@@ -397,21 +397,30 @@ var data = {
 	designs: [
 		{
 			id: 1,
+			character: "Cerberus",
+			series: "Helltaker",
+			type: "Video Game",
 			url: "Cerberus.png",
 			background: "Helltaker.png",
 			dateCreated: "2023-02-15",
 		},
 		{
 			id: 2,
+			character: "Gawr Gura",
+			series: "Hololive",
+			type: "VTuber",
 			url: "Gawr Gura.png",
 			background: "Water.png",
 			dateCreated: "2023-02-16",
 		},
 		{
 			id: 3,
+			character: "Shinobu Oshino",
+			series: "Monogatari",
+			type: "Series",
 			url: "Shinobu Oshino.png",
 			background: "",
-			dateCreated: "2021-08-16",
+			dateCreated: "0000-00-00",
 		},
 	],
 };
@@ -822,10 +831,25 @@ if (designsPage) {
 					designs[i].background +
 					`")`
 			);
+			designDetails = document.createElement("div");
+			designDetails.setAttribute("class", "details");
+			designDetails.innerHTML =
+				`<h2 class="designId">#` +
+				designs[i].id +
+				`</strong></h2><p class="designDetail"> Name: <strong>` +
+				designs[i].character +
+				`</strong></p><p class="designDetail"> Source: <strong>` +
+				designs[i].series +
+				`</strong></p><p class="designDetail"> Type: <strong>` +
+				designs[i].type +
+				`</strong></p><p class="designDetail"> Creation Date: <strong>` +
+				designs[i].dateCreated +
+				`</strong></p>`;
 			design.innerHTML =
 				`<div class="img" style="background-image: url('Assets/Images/Badges/` +
 				designs[i].url +
 				`')"></div>`;
+			design.appendChild(designDetails);
 			designsPage.appendChild(design);
 		}
 	}
@@ -854,8 +878,8 @@ if (designsPage) {
 		const xCenter = (box.left + box.right) / 2;
 		const yCenter = (box.top + box.bottom) / 2;
 
-		const offsetX = ((x - xCenter) / xCenter) * 90;
-		const offsetY = ((y - yCenter) / yCenter) * 90;
+		const offsetX = ((x - xCenter) / xCenter) * 180;
+		const offsetY = ((y - yCenter) / yCenter) * 180;
 
 		element.style.setProperty("--rotateX", -1 * offsetY + "deg");
 		element.style.setProperty("--rotateY", offsetX + "deg");

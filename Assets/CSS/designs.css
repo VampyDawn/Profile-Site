@@ -118,6 +118,7 @@ header nav a:hover.active {
   min-width: 300px;
   height: 450px;
   padding: 10px;
+  position: relative;
 }
 #designs .design .img {
   background-size: contain;
@@ -153,6 +154,28 @@ header nav a:hover.active {
 #designs .design:hover .img {
   transform: perspective(5000px) rotateY(var(--rotateY)) rotateX(var(--rotateX));
   transition: all 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+#designs .design:hover .details {
+  opacity: 1;
+  transition: all 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+#designs .design .details {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
+  position: absolute;
+  width: 100%;
+  text-align: left;
+  left: 0;
+  top: 105%;
+  background: #333;
+  border-radius: 15px;
+  padding: 10px;
+  margin-left: -10px;
+  z-index: 10;
 }
 
 footer {
