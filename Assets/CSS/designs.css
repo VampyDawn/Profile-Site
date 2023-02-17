@@ -136,7 +136,7 @@ header nav a:hover.active {
 }
 #designs .design .img::before {
   background: #000000;
-  transform: translateZ(-49px);
+  transform: translateZ(-25px);
   inset: 0.75rem;
   filter: blur(20px);
   opacity: 0.4;

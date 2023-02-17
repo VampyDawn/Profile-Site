@@ -365,9 +365,9 @@ var data = {
 			name: "The Invincible Little Lady",
 			url: "https://anilist.co/manga/111704/The-Invincible-Little-Lady/",
 			img: "The Invincible Little Lady.jpg",
-			status: "planning",
+			status: "dropped",
 			progressV: 0,
-			progressC: 0,
+			progressC: 4,
 		},
 		{
 			name: "The Unwanted Undead Adventurer",
@@ -395,9 +395,24 @@ var data = {
 		{ name: "Designs", link: "./designs.html" },
 	],
 	designs: [
-		{ id: 1, url: "Cerberus.png", background: "Helltaker.png" },
-		{ id: 2, url: "Gawr Gura.png", background: "Water.png" },
-		{ id: 3, url: "Shinobu Oshino.png", background: "" },
+		{
+			id: 1,
+			url: "Cerberus.png",
+			background: "Helltaker.png",
+			dateCreated: "2023-02-15",
+		},
+		{
+			id: 2,
+			url: "Gawr Gura.png",
+			background: "Water.png",
+			dateCreated: "2023-02-16",
+		},
+		{
+			id: 3,
+			url: "Shinobu Oshino.png",
+			background: "",
+			dateCreated: "2021-08-16",
+		},
 	],
 };
 
@@ -762,14 +777,14 @@ if (lightnovelspage) {
 		if (sortByProgress) {
 			if (desc) {
 				novels.sort((a, b) => {
-					return a.progressC < b.progressC ? 1 : -1;
+					return a.progressC > b.progressC ? 1 : -1;
 				});
 				novels.sort((a, b) => {
 					return a.progressV > b.progressV ? 1 : -1;
 				});
 			} else if (asc) {
 				novels.sort((a, b) => {
-					return a.progressC > b.progressC ? 1 : -1;
+					return a.progressC < b.progressC ? 1 : -1;
 				});
 				novels.sort((a, b) => {
 					return a.progressV < b.progressV ? 1 : -1;
@@ -797,6 +812,7 @@ const designsPage = document.getElementById("designs");
 var designs = data.designs;
 if (designsPage) {
 	function makeDesigns() {
+		designsSort();
 		for (var i = 0; i < designs.length; i++) {
 			var design = document.createElement("div");
 			design.setAttribute("class", "design");
@@ -814,6 +830,12 @@ if (designsPage) {
 		}
 	}
 	makeDesigns();
+
+	function designsSort() {
+		designs.sort((a, b) => {
+			return a.dateCreated < b.dateCreated ? 1 : -1;
+		});
+	}
 
 	document.addEventListener("mousemove", (e) => {
 		if (
