@@ -810,6 +810,7 @@ function addContacts() {
 	for (var i = 0; i < contacts.length; i++) {
 		var contact = document.createElement("a");
 		contact.setAttribute("class", "contact");
+		contact.setAttribute("target", "_blank");
 		contact.setAttribute("href", contacts[i].link);
 		contact.innerHTML = contacts[i].name;
 		contactContainer.appendChild(contact);
