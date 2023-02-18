@@ -47,7 +47,13 @@
                     <h2>DoB</h2>
                 </div>
                 <div class="value">
-                    <h2>01/01/2000</h2>
+                    <h2 id="bday">
+                        <span id="day" onfocusout="updateDoB(this)" contenteditable="true">01</span>
+                        /
+                        <span id="month" onfocusout="updateDoB(this)" contenteditable="true">01</span>
+                        /
+                        <span id="year" onfocusout="updateDoB(this)" contenteditable="true">2000</span>
+                    </h2>
                 </div>
             </div>
             <div class="stat">

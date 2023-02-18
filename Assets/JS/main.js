@@ -31,6 +31,15 @@ const weightB = document.getElementById("weightB");
 const weightF = document.getElementById("weightF");
 var showKg = true;
 var showLbs = false;
+const bDay = document.getElementById("bday");
+const bDayStr = document.getElementById("day");
+const bMonthStr = document.getElementById("month");
+const bYearStr = document.getElementById("year");
+var fullBDay;
+var dayInt;
+var monthInt;
+var yearInt;
+
 var data = {
 	lightNovels: [
 		{
@@ -425,10 +434,107 @@ var data = {
 	],
 };
 
+function getBDay() {
+	dayInt = parseInt(bDayStr.textContent);
+	monthInt = parseInt(bMonthStr.textContent);
+	yearInt = parseInt(bYearStr.textContent);
+	fullBDay = yearInt + "/" + monthInt + "/" + dayInt;
+}
+
+function updateDoB(e) {
+	if (e.id == "year") {
+		updateYear(e);
+	}
+
+	if (e.id == "month") {
+		updateMonth(e);
+	}
+
+	if (e.id == "day") {
+		updateDay(e);
+	}
+}
+
+function updateYear(e) {
+	if (!isNaN(e.textContent)) {
+		if (
+			e.textContent >= 1900 &&
+			e.textContent <= new Date().getFullYear()
+		) {
+			yearInt = e.textContent;
+			if (
+				e.textContent == new Date().getFullYear() &&
+				monthInt > new Date().getMonth()
+			) {
+				updateMonth(bMonthStr);
+			}
+		} else {
+			e.textContent = yearInt;
+		}
+		setAge();
+	} else {
+		e.textContent = yearInt;
+	}
+}
+
+function updateMonth(e) {
+	if (!isNaN(e.textContent)) {
+		if (e.textContent >= 1 && e.textContent <= 12) {
+			if (bYearStr.textContent == new Date().getFullYear()) {
+				if (e.textContent <= new Date().getMonth()) {
+					monthInt = e.textContent;
+				} else {
+					e.textContent = new Date().getMonth() + 1;
+					updateDay(bDayStr);
+				}
+			} else {
+				monthInt = e.textContent.parseInt;
+				updateDay(bDayStr);
+			}
+		} else {
+			e.textContent = monthInt;
+			updateDay(bDayStr);
+		}
+		setAge();
+	} else {
+		e.textContent = monthInt;
+		updateDay(bDayStr);
+	}
+}
+
+function updateDay(e) {
+	if (!isNaN(e.textContent)) {
+		var daysInMonth = new Date(
+			bYearStr.textContent,
+			bMonthStr.textContent,
+			0
+		).getDate();
+		if (e.textContent >= 1 && e.textContent <= daysInMonth) {
+			dayInt = e.textContent;
+		} else {
+			if (daysInMonth > new Date().getDate()) {
+				e.textContent = new Date().getDate();
+			} else {
+				e.textContent = daysInMonth;
+			}
+		}
+		setAge();
+	} else {
+		e.textContent = dayInt;
+	}
+}
+
 function setAge() {
-	var DoB = new Date(2000, 0, 1);
+	getBDay();
+	var DoB = new Date(fullBDay);
 	var Today = new Date();
-	var fullAgeYears = Math.floor(Today.getFullYear() - DoB.getFullYear());
+	var fullAgeYears = fullAgeYearsCalc(DoB);
+	function fullAgeYearsCalc(DoB) {
+		var diff_ms = Date.now() - DoB.getTime();
+		var age_dt = new Date(diff_ms);
+
+		return Math.abs(age_dt.getUTCFullYear() - 1970);
+	}
 	var fullAgeMonths = Math.floor(
 		fullAgeYears * 12 + (Today.getMonth() - DoB.getMonth())
 	);
@@ -879,8 +985,8 @@ if (designsPage) {
 		const xCenter = (box.left + box.right) / 2;
 		const yCenter = (box.top + box.bottom) / 2;
 
-		const offsetX = ((x - xCenter) / xCenter) * 180;
-		const offsetY = ((y - yCenter) / yCenter) * 180;
+		const offsetX = ((x - xCenter) / xCenter) * 100;
+		const offsetY = ((y - yCenter) / yCenter) * 100;
 
 		element.style.setProperty("--rotateX", -1 * offsetY + "deg");
 		element.style.setProperty("--rotateY", offsetX + "deg");
