@@ -402,7 +402,7 @@ var data = {
 			type: "Video Game",
 			url: "Cerberus.png",
 			background: "Helltaker.png",
-			dateCreated: "2023-02-15",
+			dateCreated: new Date(2023, 1, 15),
 		},
 		{
 			id: 2,
@@ -411,7 +411,7 @@ var data = {
 			type: "VTuber",
 			url: "Gawr Gura.png",
 			background: "Water.png",
-			dateCreated: "2023-02-16",
+			dateCreated: new Date(2023, 1, 16),
 		},
 		{
 			id: 3,
@@ -419,8 +419,8 @@ var data = {
 			series: "Monogatari",
 			type: "Series",
 			url: "Shinobu Oshino.png",
-			background: "",
-			dateCreated: "0000-00-00",
+			background: "Donuts.png",
+			dateCreated: new Date(2023, 1, 18),
 		},
 	],
 };
@@ -844,7 +844,7 @@ if (designsPage) {
 				`</strong></p><p class="designDetail"> Type: <strong>` +
 				designs[i].type +
 				`</strong></p><p class="designDetail"> Creation Date: <strong>` +
-				designs[i].dateCreated +
+				designs[i].dateCreated.toDateString() +
 				`</strong></p>`;
 			design.innerHTML =
 				`<div class="img" style="background-image: url('Assets/Images/Badges/` +
