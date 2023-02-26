@@ -890,22 +890,23 @@ if (lightnovelspage) {
 			updateLightNovels(novels);
 		}
 		if (sortByProgress) {
+			var newNovels;
 			if (desc) {
-				novels.sort((a, b) => {
+				newNovels = novels.sort((a, b) => {
 					return a.progressC > b.progressC ? 1 : -1;
 				});
-				novels.sort((a, b) => {
-					return a.progressV > b.progressV ? 1 : -1;
-				});
-			} else if (asc) {
-				novels.sort((a, b) => {
-					return a.progressC < b.progressC ? 1 : -1;
-				});
-				novels.sort((a, b) => {
+				newNovels.sort((a, b) => {
 					return a.progressV < b.progressV ? 1 : -1;
 				});
+			} else if (asc) {
+				newNovels = novels.sort((a, b) => {
+					return a.progressC < b.progressC ? 1 : -1;
+				});
+				newNovels.sort((a, b) => {
+					return a.progressV > b.progressV ? 1 : -1;
+				});
 			}
-			updateLightNovels(novels);
+			updateLightNovels(newNovels);
 		}
 	}
 }
